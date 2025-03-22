@@ -13,7 +13,7 @@ title: Credentials
       <li>GPA 4.0</li>
     </ul>
   </li>
-  <li>Bachelor of Science in Electrical Engineering — <a href="https://www.weber.edu/" target="_blank">Weber State University</a>
+  <li><a href="/assets/credentials/PLATO_UNDERGRADUATE_DEGREE.pdf" target="_blank">Bachelor of Science in Electrical Engineering</a> — <a href="https://www.weber.edu/" target="_blank">Weber State University</a>
     <ul>
       <li>GPA 3.91</li>
       <li>Summa Cum Laude</li>
@@ -29,6 +29,7 @@ title: Credentials
       <li>Security+ Certification</li>
       <li>AWS Cloud Practitioner Certification</li>
       <li>AI for Everyone — DeepLearning.AI</li>
+      <li>Certified Kubernetes Application Developer (In Progress)</li>
     </ul>
   </section>
 </article>
