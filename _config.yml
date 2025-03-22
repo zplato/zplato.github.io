@@ -1,5 +1,4 @@
 ## _config.yml
-```yaml
 title: Zachary Plato Portfolio
 email: zach.plato@gmail.com
 description: >-
@@ -13,4 +12,4 @@ linkedin_username: zacharyplato
 
 plugins:
   - jekyll-feed
-```
+
