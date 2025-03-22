@@ -1,0 +1,18 @@
+# Simple GitHub Pages Setup with Jekyll
+## _config.yml
+
+title: Zachary Plato Portfolio
+email: zach.plato@gmail.com
+description: >-
+  Portfolio site for Zachary Plato — Software and DevOps Engineer.
+baseurl: "" # leave blank as we are deploying to zplato.github.io
+url: "https://zplato.github.io" # your GitHub Pages URL
+theme: minima
+
+# Social links
+github_username: zplato
+linkedin_username: zacharyplato
+
+# Build settings
+plugins:
+  - jekyll-feed
