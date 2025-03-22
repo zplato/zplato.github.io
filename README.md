@@ -4,27 +4,35 @@
 
 This repository contains the personal portfolio website for Zachary Plato, built with Jekyll and hosted on GitHub Pages.
 
+## Pages
+- **Home** — `index.html`
+- **About Me** — `about.md`
+- **Credentials** — `credentials.md`
+- **Projects** — `projects.md` (TBD)
+- **Blog** — `blog.md` (TBD)
+
 ### Repository Structure
 ```
 root/
-│   README.md
-│   LICENSE
-│   _config.yml
 │   index.html
 │   about.md
 │   credentials.md
+│   projects.md
+│   blog.md
+│   README.md
+│   LICENSE
+│   _config.yml
 │   Gemfile
 │   Gemfile.lock
 │
 ├── _includes/
 ├── _layouts/
 │   └── default.html
-├── _site/ (auto-generated)
 ├── assets/
 │   ├── css/
 │   │   └── style.css
 │   ├── images/
-│   └── js/
+│   └── credentials/
 ```
 
 ### Running Locally
