@@ -1,0 +1,35 @@
+# Simple GitHub Pages Setup with Jekyll
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+
+# Ignore bundler files
+gemfiles/
+Gemfile.lock
+
+# Ignore Python cache (if using Python tooling)
+__pycache__/
+*.py[cod]
+
+# PyCharm project files
+.idea/
+
+# Node modules (if using JS tooling)
+node_modules/
+
+# Temporary files
+*.swp
+*.bak
+*.tmp
+
+# Ignore generated PDFs or build artifacts if placed temporarily
+*.pdf
