@@ -23,7 +23,6 @@
       border-radius: 4px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       font-family: 'Segoe UI Semilight', 'Segoe UI', sans-serif;
-      width: calc(100% - 2rem);
       margin-left: auto;
       margin-right: auto;
       box-sizing: border-box;
@@ -31,7 +30,7 @@
 
     @media screen and (max-width: 768px) {
       nav ul {
-        display: none;
+        display: none !important;
         flex-direction: column;
         align-items: stretch;
         background-color: #0d47a1;
@@ -44,7 +43,7 @@
       }
 
       nav ul.active {
-        display: flex;
+        display: flex !important;
       }
 
       .hamburger {
@@ -55,14 +54,15 @@
         top: 1rem;
         right: 1rem;
         color: white;
+        z-index: 1000;
       }
 
       nav ul li a {
         padding: 0.75rem;
-        width: 100%;
+        width: 90%;
         text-align: center;
         border: 1px solid white;
-        margin: 0.25rem 0;
+        margin: 0.25rem auto;
         border-radius: 4px;
         box-sizing: border-box;
         display: block;
@@ -102,10 +102,11 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
 
     hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
+      document.querySelectorAll('nav ul').forEach(menu => {
+        menu.classList.toggle('active');
+      });
     });
   });
 </script>
