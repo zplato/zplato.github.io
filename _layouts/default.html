@@ -8,26 +8,38 @@
 </head>
 <body>
 <div class="top-bar"></div>
-  <header>
-    <h1>{{ site.title }}</h1>
-    <nav>
-      <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/about' | relative_url }}">About Me</a></li>
-        <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
-        <li><a href="{{ '/credentials' | relative_url }}">Credentials</a></li>
-        <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>{{ site.title }}</h1>
+  <div class="hamburger">&#9776;</div>
+  <nav>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/about' | relative_url }}">About Me</a></li>
+      <li><a href="{{ '/credentials' | relative_url }}">Credentials</a></li>
+      <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+      <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main style="margin-top: 0;">
-    {{ content }}
-  </main>
+<main style="margin-top: 0;">
+  {{ content }}
+</main>
 
 <footer>
   <div class="left">&copy;{{ site.time | date: "%Y" }} {{ site.title }}</div>
-  <div class="right">This website was built as a <a href="https://github.com/zplato/zplato.github.io">GitHub</a> page using <a href="https://jekyllrb.com/">Jekyll</a></div>
+  <div class="right">This website was built with <a href="https://jekyllrb.com/">Jekyll</a></div>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  });
+</script>
 </body>
 </html>
