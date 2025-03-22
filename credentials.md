@@ -8,7 +8,7 @@ title: Credentials
   <section>
     <h2>Degrees</h2>
 <ul>
-  <li>Master of Science in Computer Science — <a href="https://www.gatech.edu/" target="_blank">Georgia Institute of Technology</a>
+  <li><a href="/assets/credentials/PLATO_GRADUATE_DEGREE.pdf" target="_blank">Master of Science in Computer Science</a> — <a href="https://www.gatech.edu/" target="_blank">Georgia Institute of Technology</a>
     <ul>
       <li>GPA 4.0</li>
     </ul>
