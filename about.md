@@ -5,14 +5,10 @@ title: About Me
 
 # About Me
 
-Hi! I'm **Zachary Plato**, a dedicated Software and DevOps Engineer with over 8 years of experience in developing high-performance applications, leading cross-functional teams, and driving innovation in cloud and microservices architecture.
+Hi! I'm **Zachary Plato**, a dedicated Software and DevOps Engineer with over 8 years of experience in developing high-performance applications, leading teams, and driving cloud innovation.
 
-I’m passionate about creating scalable solutions, mentoring fellow engineers, and working on projects that make a real-world impact. My experience spans backend development (Python, C++, Java), cloud technologies (AWS, Kubernetes, Terraform), and building robust CI/CD pipelines.
+I’m passionate about building scalable solutions and mentoring engineers. I’m also a U.S. Army OEF Veteran and a lifelong learner.
 
-In addition to my engineering career, I am a U.S. Army OEF Veteran and a continuous learner with an MS in Computer Science from Georgia Tech.
-
-### Let's connect!
+### Connect with me:
 - [GitHub](https://github.com/zplato)
 - [LinkedIn](https://www.linkedin.com/in/zacharyplato)
-- [Email me](mailto:zach.plato@gmail.com)
-
