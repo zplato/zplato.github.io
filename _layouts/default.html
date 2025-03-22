@@ -38,8 +38,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding: 2rem 0;
-        z-index: 999;
+        padding: 4rem 0 2rem 0;
+        z-index: 998;
       }
 
       nav ul.active {
@@ -50,7 +50,7 @@
         display: block;
         cursor: pointer;
         font-size: 2rem;
-        position: absolute;
+        position: fixed;
         top: 1rem;
         right: 1rem;
         color: white;
@@ -102,10 +102,16 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
 
     hamburger.addEventListener('click', () => {
-      document.querySelectorAll('nav ul').forEach(menu => {
-        menu.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Ensure menu closes when navigating
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
       });
     });
   });
