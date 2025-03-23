@@ -16,6 +16,9 @@
 
     header h1 {
       color: white !important;
+      margin: 0;
+      padding: 0.5rem 0;
+      text-align: center;
     }
 
     nav ul {
@@ -46,7 +49,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding: 6rem 0 2rem 0;
+        padding: 7rem 0 2rem 0;
         z-index: 998;
         pointer-events: none;
       }
@@ -59,7 +62,7 @@
       .hamburger {
         display: block;
         position: absolute;
-        top: 0.75rem;
+        top: 4rem; /* Moved below the header text */
         right: 1.5rem;
         width: 30px;
         height: 22px;
@@ -75,12 +78,6 @@
         margin-bottom: 5px;
         border-radius: 2px;
         transition: 0.4s;
-      }
-
-      .hamburger.active {
-        position: absolute;
-        top: 2.5rem;
-        right: 1.5rem;
       }
 
       .hamburger.active span:nth-child(1) {
@@ -117,7 +114,7 @@
 <header>
   <h1>{{ site.title }}</h1>
   <div class="hamburger" id="hamburger">
-    <span></span> <!-- Create lines of hamburger menu -->
+    <span></span>
     <span></span>
     <span></span>
   </div>
