@@ -9,7 +9,7 @@
     body {
       margin: 0;
       overflow-x: hidden; /* Prevent horizontal scrolling */
-      background-color: #f9f9f9; /* Example background to match page */
+      background-color: #f9f9f9; /* Match the page background */
     }
 
     header {
@@ -31,6 +31,8 @@
       display: flex;
       justify-content: center;
       gap: 1rem;
+      margin: 0;
+      padding: 0;
     }
 
     section, article {
@@ -51,8 +53,9 @@
       width: 100%;
       background: #f9f9f9; /* Match the rest of the page */
       text-align: right;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0.5rem;
       z-index: 1001;
+      box-sizing: border-box;
     }
 
     @media screen and (max-width: 768px) {
@@ -65,7 +68,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding: 7rem 0 2rem 0;
+        padding: 6rem 0 2rem 0; /* Reduced padding to eliminate overlap */
         z-index: 998;
         pointer-events: none;
       }
@@ -80,7 +83,7 @@
         width: 30px;
         height: 22px;
         cursor: pointer;
-        margin-right: 1rem; /* Increase right margin */
+        margin-right: 0.5rem; /* Reduced margin so it's not off-screen */
         position: relative;
         right: 0;
         z-index: 1002;
@@ -93,11 +96,6 @@
         background: #333;
         margin-bottom: 5px;
         border-radius: 2px;
-      }
-
-      /* Hide hamburger when menu is active */
-      nav ul.active ~ .hamburger-container .hamburger {
-        display: none;
       }
 
       nav ul li a {
