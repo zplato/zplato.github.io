@@ -39,6 +39,16 @@
       box-sizing: border-box;
     }
 
+    .hamburger-container {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background: white;
+      text-align: right;
+      padding: 0.5rem 1.5rem;
+      z-index: 1001;
+    }
+
     @media screen and (max-width: 768px) {
       nav ul {
         display: none !important;
@@ -57,14 +67,6 @@
       nav ul.active {
         display: flex !important;
         pointer-events: auto;
-      }
-
-      .hamburger-container {
-        position: relative;
-        width: 100%;
-        background: white;
-        text-align: right;
-        padding: 0.5rem 1.5rem;
       }
 
       .hamburger {
@@ -128,7 +130,7 @@
     </ul>
   </nav>
 </header>
-<div class="hamburger-container">
+<div class="hamburger-container" style="display: block;">
   <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
