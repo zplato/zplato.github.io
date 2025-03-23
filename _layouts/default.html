@@ -48,13 +48,12 @@
     }
 
     .hamburger-container {
-      position: sticky;
+      position: fixed;
       top: 0;
-      width: 100%;
-      background: #f9f9f9; /* Match the rest of the page */
-      text-align: right;
+      right: 0;
+      background: transparent;
       padding: 0.5rem 0.5rem;
-      z-index: 1002; /* Ensure it stays on top */
+      z-index: 2000; /* Ensure it stays above everything */
       box-sizing: border-box;
     }
 
@@ -68,8 +67,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding: 5rem 0 2rem 0; /* Reduced padding to eliminate overlap */
-        z-index: 997; /* Lower than hamburger-container */
+        padding: 4rem 0 2rem 0; /* Adjusted padding */
+        z-index: 998;
         pointer-events: none;
       }
 
@@ -83,10 +82,8 @@
         width: 30px;
         height: 22px;
         cursor: pointer;
-        margin-right: 0.5rem; /* Reduced margin */
-        position: relative;
-        right: 0;
-        z-index: 1003; /* Highest priority */
+        margin-right: 0.5rem;
+        z-index: 2001; /* On top */
       }
 
       .hamburger span {
