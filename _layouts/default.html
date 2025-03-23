@@ -6,7 +6,6 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <style>
-
     header {
       position: relative;
     }
@@ -45,20 +44,28 @@
         left: 0;
         padding: 8rem 0 2rem 0;
         z-index: 998;
+        pointer-events: none;
       }
 
       nav ul.active {
         display: flex !important;
+        pointer-events: auto;
       }
 
       .hamburger {
         display: block;
         cursor: pointer;
         font-size: 2rem;
-        position: absolute;
+        position: fixed;
         top: 1rem;
         right: 1.5rem;
         color: white;
+        z-index: 1002;
+        transition: transform 0.3s ease;
+      }
+
+      .hamburger.active {
+        transform: rotate(45deg);
       }
 
       nav ul li a {
@@ -82,9 +89,9 @@
 <div class="top-bar"></div>
 <header>
   <h1>{{ site.title }}</h1>
-  <div class="hamburger">&#9776;</div>
+  <div class="hamburger" id="hamburger">&#9776;</div>
   <nav>
-    <ul>
+    <ul id="navMenu">
       <li><a href="{{ '/' | relative_url }}">Home</a></li>
       <li><a href="{{ '/about' | relative_url }}">About Me</a></li>
       <li><a href="{{ '/credentials' | relative_url }}">Credentials</a></li>
@@ -105,16 +112,18 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
 
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
     });
 
     document.querySelectorAll('nav ul li a').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
       });
     });
   });
