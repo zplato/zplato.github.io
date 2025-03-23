@@ -59,11 +59,16 @@
         pointer-events: auto;
       }
 
+      .hamburger-container {
+        position: relative;
+        width: 100%;
+        background: white;
+        text-align: right;
+        padding: 0.5rem 1.5rem;
+      }
+
       .hamburger {
-        display: block;
-        position: absolute;
-        top: 4rem; /* Moved below the header text */
-        right: 1.5rem;
+        display: inline-block;
         width: 30px;
         height: 22px;
         cursor: pointer;
@@ -74,7 +79,7 @@
         display: block;
         height: 4px;
         width: 100%;
-        background: white;
+        background: #333; /* Dark gray */
         margin-bottom: 5px;
         border-radius: 2px;
         transition: 0.4s;
@@ -113,11 +118,6 @@
 <div class="top-bar"></div>
 <header>
   <h1>{{ site.title }}</h1>
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
   <nav>
     <ul id="navMenu">
       <li><a href="{{ '/' | relative_url }}">Home</a></li>
@@ -128,6 +128,13 @@
     </ul>
   </nav>
 </header>
+<div class="hamburger-container">
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
 
 <main style="margin-top: 0;">
   {{ content }}
