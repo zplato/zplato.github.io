@@ -6,6 +6,11 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <style>
+
+    header {
+      position: relative;
+    }
+
     header h1 {
       color: white !important;
     }
@@ -50,11 +55,10 @@
         display: block;
         cursor: pointer;
         font-size: 2rem;
-        position: fixed;
-        top: 4rem; /* Move hamburger down and ensure it stays fixed */
+        position: absolute;
+        top: 1rem;
         right: 1.5rem;
         color: white;
-        z-index: 1002;
       }
 
       nav ul li a {
