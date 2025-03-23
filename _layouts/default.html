@@ -48,10 +48,10 @@
     }
 
     .hamburger-container {
-      position: absolute;
-      top: 3.5rem; /* Positioned below the sticky header */
-      right: 0.75rem;
-      background: transparent;
+      position: relative;
+      margin-top: 1rem; /* Push it below the header text */
+      text-align: right;
+      padding: 0.5rem 0.5rem;
       z-index: 1002;
       box-sizing: border-box;
     }
@@ -113,6 +113,13 @@
 <div class="top-bar"></div>
 <header>
   <h1>{{ site.title }}</h1>
+  <div class="hamburger-container">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
   <nav>
     <ul id="navMenu">
       <li><a href="{{ '/' | relative_url }}">Home</a></li>
@@ -123,13 +130,6 @@
     </ul>
   </nav>
 </header>
-<div class="hamburger-container">
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
 
 <main style="margin-top: 0;">
   {{ content }}
