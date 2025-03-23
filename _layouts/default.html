@@ -6,6 +6,11 @@
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <style>
+    body {
+      margin: 0;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
     header {
       position: sticky;
       top: 0;
@@ -47,7 +52,6 @@
       text-align: right;
       padding: 0.5rem 1rem;
       z-index: 1001;
-      overflow-x: hidden;
     }
 
     @media screen and (max-width: 768px) {
@@ -75,7 +79,9 @@
         width: 30px;
         height: 22px;
         cursor: pointer;
-        margin-right: 0.5rem; /* Add padding from the right edge */
+        margin-right: 0.5rem;
+        position: relative;
+        right: 0;
         z-index: 1002;
       }
 
@@ -83,7 +89,7 @@
         display: block;
         height: 4px;
         width: 100%;
-        background: #333; /* Dark gray */
+        background: #333;
         margin-bottom: 5px;
         border-radius: 2px;
         transition: 0.4s;
@@ -132,7 +138,7 @@
     </ul>
   </nav>
 </header>
-<div class="hamburger-container" style="display: block;">
+<div class="hamburger-container">
   <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
