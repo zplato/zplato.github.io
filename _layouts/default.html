@@ -13,7 +13,7 @@
     }
 
     header {
-      position: relative;
+      position: sticky;
       top: 0;
       z-index: 1000;
       background-color: #0d47a1;
@@ -48,12 +48,11 @@
     }
 
     .hamburger-container {
-      position: fixed;
-      top: 0;
-      right: 0;
+      position: absolute;
+      top: 3.5rem; /* Positioned below the sticky header */
+      right: 0.75rem;
       background: transparent;
-      padding: 0.5rem 0.5rem;
-      z-index: 2000; /* Ensure it stays above everything */
+      z-index: 1002;
       box-sizing: border-box;
     }
 
@@ -67,7 +66,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        padding: 4rem 0 2rem 0; /* Adjusted padding */
+        padding: 5rem 0 2rem 0;
         z-index: 998;
         pointer-events: none;
       }
@@ -82,8 +81,6 @@
         width: 30px;
         height: 22px;
         cursor: pointer;
-        margin-right: 0.5rem;
-        z-index: 2001; /* On top */
       }
 
       .hamburger span {
