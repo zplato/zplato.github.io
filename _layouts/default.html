@@ -7,7 +7,10 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <style>
     header {
-      position: relative;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #0d47a1;
     }
 
     header h1 {
@@ -54,7 +57,7 @@
 
       .hamburger {
         display: block;
-        position: fixed;
+        position: absolute;
         top: 2.5rem;
         right: 1.5rem;
         width: 30px;
@@ -139,12 +142,6 @@
     hamburger.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       hamburger.classList.toggle('active');
-
-      if (hamburger.classList.contains('active')) {
-        hamburger.style.position = 'fixed';
-      } else {
-        hamburger.style.position = 'fixed';
-      }
     });
 
     document.querySelectorAll('nav ul li a').forEach(link => {
