@@ -8,8 +8,17 @@
   <style>
     body {
       margin: 0;
+      padding: 0;
       overflow-x: hidden; /* Prevent horizontal scrolling */
       background-color: #f9f9f9; /* Match the page background */
+    }
+
+    .top-bar {
+      height: 2rem;
+      background-color: #f9f9f9; /* Match the rest of the page */
+      width: 100%;
+      margin: 0;
+      padding: 0;
     }
 
     header {
@@ -17,7 +26,8 @@
       top: 0;
       z-index: 1000;
       background-color: #0d47a1;
-      padding: 1rem 0 0.5rem 0;
+      padding: 0.5rem 0; /* Reduced padding to minimize white space */
+      margin: 0;
     }
 
     header h1 {
@@ -85,6 +95,9 @@
   </style>
 </head>
 <body>
+<div style="background-color: #ffcc00; color: #000; text-align: center; padding: 10px; font-weight: bold; font-size: 1.2rem;">
+ 🚧 This site is currently under construction — check back soon! 🚧
+</div>
 <div class="top-bar"></div>
 <header>
   <h1>{{ site.title }}</h1>
